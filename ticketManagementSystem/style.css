@@ -1,0 +1,67 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+/* navbar css */
+.navbar{
+    background-color:gray;
+    height:12vh;
+    width:100%;
+    border-color: red;
+    position: fixed;
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.filter-container{
+    background-color: rgb(58, 57, 57);
+    height:3rem;
+    width:20vh;
+    margin-left:70rem;
+    margin-right: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.filter-selector{
+    height:1.5rem;
+    width: 1.5rem;
+    border-color: red;
+}
+.filter-selector.blue{
+    background-color:lightblue;
+}
+.filter-selector.green{
+    background-color:lightgreen;
+}
+.filter-selector.pink{
+    background-color:lightpink;
+}
+.filter-selector.black{
+    background-color:black;
+}
+.action-container{
+    background-color: rgb(58, 57, 57);
+    height:3rem;
+    width:20vh;
+    display: flex;
+    justify-content:space-evenly;
+    padding-top: 0.5rem;
+}
+.main-container{
+    border: 5px solid green; 
+    position:relative;
+    top:12vh;
+    min-height:88vh;
+    width:100%;
+
+}
+/* .ticket-creator{
+    height:50rem;
+    width:70 rem;
+    position:absolute;
+    margin:auto;
+} */
