@@ -1,12 +1,12 @@
-.signupWrapper{
-    display:flex;
-    justify-content:center;
-}
+
 .signupCard{
     width:27vw;
     margin-top: 5%;
 }
-
+.loginCard{
+    display:flex;
+    justify-content:center;
+}
 .cardLogo{
     display:flex;
     justify-content:center;
@@ -19,7 +19,25 @@
     display:flex;
     justify-content:center;
 }
+.imgCard{
+    left:-10px;
+    top:45px;
+    height:500px;
+    width:320px;
+    position: relative;
+}
+.loginWrapper{
+    display:flex;
+    justify-content:center;
+}
+.carousel{
+    height:400px;
+    width:200px;
+    position:absolute;
+    top:63px;
+    left:230px;
 
+}
 @media only screen and (max-width:620px){
     .signupCard{
         width:60%;
