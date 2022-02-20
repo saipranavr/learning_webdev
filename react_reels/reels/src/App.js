@@ -11,6 +11,7 @@ import Login from "./components/Login.js";
 import Signup from "./components/Signup.js";
 import Feed from "./components/Feed"
 import { Authcontextp } from "./Context/AuthContext";
+import PrivateRouter from './components/PrivateRouter'
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
         <Switch>
           <Route path="/login" component={Login} />
           <Route path="/signup" component={Signup} />
-          <Route path="/" component={Feed} />
+          <PrivateRouter path="/" abc={Feed} />
         </Switch>
       </Authcontextp>
     </BrowserRouter>
