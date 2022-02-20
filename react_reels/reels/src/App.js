@@ -9,17 +9,19 @@ import {
 } from "react-router-dom";
 import Login from "./components/Login.js";
 import Signup from "./components/Signup.js";
-import { AuthProvider } from "./Context/AuthContext";
+import Feed from "./components/Feed"
+import { Authcontextp } from "./Context/AuthContext";
 
 function App() {
   return (
     <BrowserRouter>
-      <AuthProvider>
+      <Authcontextp>
         <Switch>
           <Route path="/login" component={Login} />
           <Route path="/signup" component={Signup} />
+          <Route path="/" component={Feed} />
         </Switch>
-      </AuthProvider>
+      </Authcontextp>
     </BrowserRouter>
   );
 }

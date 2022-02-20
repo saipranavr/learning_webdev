@@ -1,9 +1,8 @@
 import React,{useState,useEffect} from 'react';
 import auth from '../firebase';
+export const AuthContext = React.createContext();
 
-const AuthContext = React.createContext();
-
-export function AuthProvider({children}){
+export function Authcontextp({children}){
     const[currentUser,setUser] = useState();
     const[loading,setLoading] = useState(true);
     async function login(email,password){
@@ -21,7 +20,7 @@ export function AuthProvider({children}){
             setLoading(false);
         })
         return()=>{
-            unsub();
+            unsub()
         }
     },[])
     const store = {

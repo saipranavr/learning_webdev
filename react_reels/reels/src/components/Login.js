@@ -1,4 +1,5 @@
 import * as React from "react";
+import {useContext} from 'react';
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -17,6 +18,7 @@ import img1 from "../assets/img1.jpg"
 import img2 from "../assets/img2.jpg"
 import img3 from "../assets/img3.jpg"
 import 'pure-react-carousel/dist/react-carousel.es.css';
+import {AuthContext} from '../Context/AuthContext.js';
 
 export default function Login() {
   const useStyle = makeStyles({
@@ -29,6 +31,8 @@ export default function Login() {
     },
   });
   const classes = useStyle();
+  const store = useContext(AuthContext);
+  console.log(store);
   return (
     <div className="loginWrapper">
       <div
@@ -84,7 +88,7 @@ export default function Login() {
             </Typography>
           </CardContent>
           <CardActions>
-            <Button color="primary" fullWidth="true" variant="contained">
+            <Button color="primary" fullWidth={true} variant="contained">
               LOGIN
             </Button>
           </CardActions>
