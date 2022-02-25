@@ -66,7 +66,8 @@ export default function SignUp() {
             email:email,
             password:password,
             fullname:name,
-            profileUrl:url
+            profileUrl:url,
+            createdAt:database.getUserTimeStamp.serverTimestamp()
           })
         })
       }

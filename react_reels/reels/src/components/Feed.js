@@ -1,10 +1,21 @@
 import React from "react";
-import { useContext } from "react";
+import { useContext,useState,useEffect } from "react";
 import { AuthContext } from "../Context/AuthContext";
 import UploadFile from "../components/UploadFile";
-
+import { database,storage } from "../firebase";
 function Feed() {
-  const { signOut } = useContext(AuthContext);
+  const { currentUser,signOut } = useContext(AuthContext);
+  const[userData,setUserData] = useState('');
+  useEffect(()=>{
+    const unsub = database.users.doc(currentUser.uid).onSnapshot((snapshot)=>{
+      console.log(snapshot.data())
+      setUserData(snapshot.data())
+    })
+    return ()=>{
+      unsub()
+    }
+  },[currentUser])
+
   const handlesignout = async () => {
     try {
       await signOut();
@@ -25,6 +36,7 @@ function Feed() {
         <h1>Feed</h1>
         <button onClick={handlesignout}>Logout</button>
       </div>
+      <UploadFile user={userData}/>
     </div>
   );
 }
