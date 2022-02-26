@@ -1,0 +1,53 @@
+.video-container{
+    height: 80vh;
+    border-radius: 20px;
+    background-color: white;
+    overflow: scroll;
+    scroll-snap-type: y mandatory;
+    scrollbar-width:none;
+
+}
+.video-container::-webkit-scrollbar{
+    display: none;
+}
+
+.videos{
+    position: relative;
+}
+
+.fa{
+    position: absolute;
+    bottom:7%;
+    left:8%;
+
+}
+
+.fa h4{
+    margin: 0;
+    color:white;
+    margin-top:8%;
+    margin-left:25%;
+}
+
+.icon-style{
+    position: absolute;
+    bottom:9rem;
+    left: 17rem;
+
+}
+
+.like{
+    cursor: pointer;
+    color:red;
+}
+
+.unlike{
+    cursor: pointer;
+    color:white;
+}
+
+.chat-style{
+    position: absolute;
+    bottom:7rem;
+    left: 17rem;
+}
