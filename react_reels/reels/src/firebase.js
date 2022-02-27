@@ -12,6 +12,7 @@ export const firestore=firebase.firestore();
 export const database ={
     users: firestore.collection("users"),
     posts:firestore.collection("posts"),
+    comments:firestore.collection("comments"),
     getUserTimeStamp: firebase.firestore.FieldValue
 }
 export const storage = firebase.storage();
